@@ -67,7 +67,7 @@ methods: {
 ### Methods
 可以通过ref来调用音频的方法，如
 ``` javascript
-<hy-audio-player :audio="audio" ref="audio"></hy-audio-player>
+<v-audio-player :audio="audio" ref="audio"></v-audio-player>
 ```
 
 
