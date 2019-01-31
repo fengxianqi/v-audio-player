@@ -1,7 +1,10 @@
 {
   "name": "v-audio-player",
   "version": "0.1.0",
-  "private": true,
+  "description": "A audio player vue component based on html5",
+  "main": "lib/v-audio-player.umd.min.js",
+  "keyword": "vue audio player",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -22,5 +25,20 @@
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.21"
-  }
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@fengxianqi.github.com:fengxianqi/v-audio-player.git"
+  },
+  "keywords": [
+    "vue",
+    "audio",
+    "player"
+  ],
+  "author": "fengxianqi",
+  "license": "MIT"
 }
