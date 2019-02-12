@@ -1,6 +1,6 @@
 {
   "name": "v-audio-player",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A audio player vue component based on html5",
   "main": "lib/v-audio-player.umd.min.js",
   "keyword": "vue audio player",
