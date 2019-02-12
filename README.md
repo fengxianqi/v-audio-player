@@ -54,7 +54,7 @@ data () {
   return {
     audio: {
       name: 'Sometimes When We Touch',
-      url: 'https://m10.music.126.net/20190131155852/8e02bb18cf0c24d323a249f7a02c44d2/ymusic/d6cf/96c1/b821/010fafb2cdc7de46b5ad675137b235bd.mp3'
+      url: 'https://fengxianqi.github.io/v-audio-player/dist/media/sometimes_when_we_touch.010fafb2.mp3'
     }
   }
 },
