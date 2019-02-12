@@ -1,4 +1,9 @@
 # v-audio-player
+[![NPM version](https://img.shields.io/npm/v/v-audio-player.svg)](https://www.npmjs.com/package/v-audio-player)
+[![npm download](https://img.shields.io/npm/dt/v-audio-player.svg?style=flat-square)](https://www.npmjs.com/package/v-audio-player)
+[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/v-audio-player/badge)](https://www.jsdelivr.com/package/npm/v-audio-player)
+[![license](https://img.shields.io/npm/l/v-audio-player.svg?style=flat-square)](https://github.com/fengxianqi/v-audio-player/blob/master/LICENSE)
+
 A audio player vue component based on html5.
 
 
