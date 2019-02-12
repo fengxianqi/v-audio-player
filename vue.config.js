@@ -1,5 +1,6 @@
 const path = require('path')
 module.exports = {
+  publicPath: 'https://fengxianqi.github.io/v-audio-player/dist/',
   pages: {
     index: {
       entry: 'examples/main.js',
