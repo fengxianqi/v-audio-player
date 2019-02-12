@@ -6,23 +6,45 @@
 
 A audio player vue component based on html5.
 
+## Demo
+[demo](https://fengxianqi.github.io/v-audio-player/dist/)
 
-### Usage
+## Installation
 
 ``` javascript
 npm i v-audio-player
 ```
 
-### Examples
+## Usage
 
-``` javascript
-import VAudioPlayer from 'v-audio-player'
+``` vue
+<template>
+  <div id="app">
+    <v-audio-player :audio="audio" ref="audio"></v-audio-player>
+  </div>
+</template>
 
-<v-audio-player :audio="{name: 'xx', url: 'http://xx.mp3'}"></v-audio-player>
+<script>
+import VAudioPlayer from '../src/index.js'
 
+export default {
+  data () {
+    return {
+      audio: {
+        name: 'Sometimes When We Touch',
+        loop: true,
+        url: 'https://fengxianqi.github.io/v-audio-player/dist/media/sometimes_when_we_touch.010fafb2.mp3'
+      }
+    }
+  },
+  components: {
+    VAudioPlayer
+  }
+}
+</script>
 ```
 
-### props
+## props
 
 audio 属性下：
 
@@ -33,7 +55,8 @@ audio 属性下：
 | autoplay | 是否自动播放 | bool | true |
 | loop | 是否循环播放 | bool | false |
 
-### Events
+## Events
+暴露一些`audio`标签默认的常用事件
 
 |   name    |       Explanation        |
 | :-------: | :----------------------: |
@@ -43,33 +66,37 @@ audio 属性下：
 | progress  |      音频正在加载时      |
 |  canplay  |      音频可以播放时      |
 |   error   | 音频加载失败或出现错误时 |
-|   ended   |       音频播放结束       |
+|   ended   |       音频播放结束时触发       |
 
-##### Events Example
+#### Events Example
 
-``` javascript
-<v-audio-player :audio="audio" @play="onPlay" @ended="onEnded"></v-audio-player>
-// ...
-data () {
-  return {
-    audio: {
-      name: 'Sometimes When We Touch',
-      url: 'https://fengxianqi.github.io/v-audio-player/dist/media/sometimes_when_we_touch.010fafb2.mp3'
+``` vue
+<template>
+  <v-audio-player :audio="audio" @play="onPlay" @ended="onEnded"></v-audio-player>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      audio: {
+        name: 'Sometimes When We Touch',
+        url: 'https://fengxianqi.github.io/v-audio-player/dist/media/sometimes_when_we_touch.010fafb2.mp3'
+      }
+    }
+  },
+  methods: {
+    onPlay (e) {
+      console.log('onplay', e)
+    },
+    onEnded (e) {
+      console.log('this audio play ended', e)
     }
   }
-},
-methods: {
-  onPlay (e) {
-    console.log('onplay', e)
-  },
-  onEnded (e) {
-    console.log('this audio play ended', e)
-  }
 }
-
+</script>
 ```
 
-### Methods
+## Methods
 可以通过ref来调用音频的方法，如
 ``` javascript
 <v-audio-player :audio="audio" ref="audio"></v-audio-player>
