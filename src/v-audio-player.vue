@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <audio v-bind="_audio" ref="audio" @loadstart="loadstart" @progress="progress" @canplay="canplay" @pause="onpause" :src="_audio.url" @play="onplay" @error="error" @timeupdate="_updateTime" @ended="ended"></audio>
+    <audio :autoplay="_audio.autoplay" :loop="_audio.loop" ref="audio" @loadstart="loadstart" @progress="progress" @canplay="canplay" @pause="onpause" :src="_audio.url" @play="onplay" @error="error" @timeupdate="_updateTime" @ended="ended"></audio>
   </div>
 </template>
 
@@ -68,10 +68,10 @@ export default {
     onplay (e) {
       this.isPlaying = true
       this.audioReady = true
-      this.$emit('onplay', e)
+      this.$emit('play', e)
     },
     onpause (e) {
-      this.$emit('onpause', e)
+      this.$emit('pause', e)
     },
     canplay (e) {
       this.audioReady = true

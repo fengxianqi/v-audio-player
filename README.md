@@ -29,7 +29,7 @@ audio 属性下：
 | name | Explanation | Type | Default |
 |:---:|:---:|:---:|:---:|
 | url | 音频路径 | string |  |
-| name | 音频名称 | string | 'test' |
+| name | 音频名称 | string |  |
 | autoplay | 是否自动播放 | bool | true |
 | loop | 是否循环播放 | bool | false |
 
@@ -37,8 +37,8 @@ audio 属性下：
 
 |   name    |       Explanation        |
 | :-------: | :----------------------: |
-|  onplay   |    音频开始播放时触发    |
-|  onpause  |      音频暂停时触发      |
+|  play   |    音频开始播放时触发    |
+|  pause  |      音频暂停时触发      |
 | loadstart |      音频开始加载时      |
 | progress  |      音频正在加载时      |
 |  canplay  |      音频可以播放时      |
@@ -48,7 +48,7 @@ audio 属性下：
 ##### Events Example
 
 ``` javascript
-<v-audio-player :audio="audio" @onplay="onPlay" @ended="onEnded"></v-audio-player>
+<v-audio-player :audio="audio" @play="onPlay" @ended="onEnded"></v-audio-player>
 // ...
 data () {
   return {
@@ -77,7 +77,7 @@ methods: {
 
 
 |   name    |       Explanation        |
-| :------- | :----------------------: |
+| :------- | :---------------------- |
 |  this.$refs.audio.play()   | 播放音频 |
 |  this.$refs.audio.pause()  | 暂停音频 |
 | this.$refs.audio.volume() | 获取或设置音频的音量，设置时的值范围是：0~1 |
