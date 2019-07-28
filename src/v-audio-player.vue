@@ -133,11 +133,12 @@ export default {
       return this.$refs.audio.duration
     },
     _updateTime (e) {
-      this.currentTime = e.target.currentTime
-      const progressWidth = this.currentTime / this.currentDuration * this.$refs.progressBar.clientWidth
-      this._offset(progressWidth)
+      if (this.$refs.progressBar) {
+        this.currentTime = e.target.currentTime
+        const progressWidth = this.currentTime / this.currentDuration * this.$refs.progressBar.clientWidth
+        this._offset(progressWidth)
+      }
     },
-
     _toggleAudioPlay () {
       if (this.isPlaying) {
         this.$refs.audio.pause()
