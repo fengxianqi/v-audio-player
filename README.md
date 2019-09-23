@@ -9,6 +9,9 @@ A audio player vue component based on html5.
 ## Demo
 [demo](https://fengxianqi.github.io/v-audio-player/dist/)
 
+## Feature
+- 同时支持PC鼠标和H5触摸拖动进度条
+
 ## Installation
 
 ``` javascript
